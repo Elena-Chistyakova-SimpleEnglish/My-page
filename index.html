@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Елена Чистякова · английский с заботой</title>
+    <link rel="preload" href="./assets/elena-optimized.jpg" as="image" type="image/jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -456,7 +457,7 @@
                 <!-- LEFT COLUMN -->
                 <div class="photo-section">
                     <div class="photo-frame">
-                        <img src="https://i.postimg.cc/hv57PBYt/IMG-20260321-232143-114.jpg" alt="Елена Чистякова">
+                        <img src="./assets/elena-optimized.jpg" alt="Елена Чистякова" width="960" height="524" fetchpriority="high" decoding="async">
                     </div>
                     <div class="photo-caption">
                         <i class="fas fa-heart"></i> Английский с интересом и любовью
@@ -476,7 +477,7 @@
                     </div>
 
                     <div class="details">
-                        <p><i class="fas fa-graduation-cap"></i><span><strong>Филолог, преподаватель английского</strong> · опыт 17 лет</span></p>
+                        <p><i class="fas fa-graduation-cap"></i><span><strong>Филолог, преподаватель английского</strong> · опыт 16 лет</span></p>
                         <p><i class="fas fa-heart" style="color:#e3957c;"></i><span>Очень люблю свою работу, сочетаю классические методики и современные подходы</span></p>
                         <p><i class="fas fa-puzzle-piece"></i><span>Использую интерактивные форматы, игры, проекты</span></p>
                     </div>
@@ -513,7 +514,7 @@
                         <div class="qr-codes-container">
                             <div class="qr-wrapper" onclick="openQRModal('telegram')">
                                 <div class="qr-preview">
-                                    <img src="https://i.postimg.cc/SJR7Wtmx/EFE48B31_C3A2_4041_A61D_D57A6C7B8A5F.png" alt="Telegram QR">
+                            <img src="./assets/qr-telegram.png" alt="Telegram QR" width="180" height="180" loading="lazy" decoding="async">
                                 </div>
                                 <div class="qr-label">
                                     <i class="fab fa-telegram"></i> Telegram канал
@@ -523,7 +524,7 @@
                             
                             <div class="qr-wrapper" onclick="openQRModal('max')">
                                 <div class="qr-preview">
-                                    <img src="https://i.postimg.cc/PLYMCpT8/73482AAD_8ACE_4F44_9D5E_88E1DC7F6628.png" alt="MAX QR">
+                            <img src="./assets/qr-max.png" alt="MAX QR" width="180" height="180" loading="lazy" decoding="async">
                                 </div>
                                 <div class="qr-label">
                                     <i class="fas fa-comments"></i> MAX канал
@@ -668,11 +669,11 @@
         const qrData = {
             telegram: {
                 title: 'Telegram канал',
-                qr: 'https://i.postimg.cc/SJR7Wtmx/EFE48B31_C3A2_4041_A61D_D57A6C7B8A5F.png'
+                qr: './assets/qr-telegram.png'
             },
             max: {
                 title: 'MAX канал',
-                qr: 'https://i.postimg.cc/PLYMCpT8/73482AAD_8ACE_4F44_9D5E_88E1DC7F6628.png'
+                qr: './assets/qr-max.png'
             }
         };
 
