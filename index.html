@@ -28,7 +28,20 @@
     </section>
   </article></main>
   <button class="gift-button" type="button" data-open-gift aria-label="Испытать удачу"><i class="fas fa-gift"></i></button>
-  <div class="modal" id="giftModal" aria-hidden="true"><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="giftTitle"><button class="modal-close" type="button" data-close-modal aria-label="Закрыть">&times;</button><h2 id="giftTitle"><i class="fas fa-gift"></i> Испытай удачу!</h2><div class="gift-content"><div class="gift-icon">🎰</div><p>Крути барабан и получи приятный подарок!</p><button class="btn btn-primary" type="button" data-spin>Крутить</button><div class="gift-result" data-gift-result hidden><div class="gift-icon">🎉</div><strong data-prize></strong><a class="btn btn-telegram" href="https://t.me/Elena_Simple_english" target="_blank" rel="noopener">Получить в Telegram</a></div></div></div></div>
+  <div class="modal" id="giftModal" aria-hidden="true">
+    <div class="modal-card wheel-modal-card" role="dialog" aria-modal="true" aria-labelledby="giftTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">&times;</button>
+      <header class="wheel-heading"><span>Подарок для новых учеников</span><h2 id="giftTitle"><i class="fas fa-gift"></i> Колесо удачи</h2><p>Одно вращение — один гарантированный приз</p></header>
+      <div class="wheel-layout">
+        <div class="wheel-stage"><div class="wheel-pointer" aria-hidden="true"></div><div class="wheel-clip"><canvas id="prizeWheel" width="720" height="720" aria-label="Колесо с вариантами призов"></canvas></div><div class="wheel-hub" aria-hidden="true"><i class="fas fa-star"></i></div></div>
+        <div class="wheel-panel">
+          <p class="wheel-status" data-wheel-status>Нажмите кнопку — колесо выберет ваш подарок.</p>
+          <button class="btn btn-primary spin-button" type="button" data-spin><i class="fas fa-play"></i> Крутить колесо</button>
+          <div class="gift-result" data-gift-result hidden><span class="result-kicker">Ваш приз</span><strong data-prize></strong><div class="result-actions"><button class="btn btn-warm" type="button" data-save-prize><i class="fas fa-download"></i> Сохранить PNG</button><button class="btn btn-telegram" type="button" data-share-prize><i class="fas fa-share-alt"></i> Поделиться</button></div><small>Сохраните картинку и отправьте её мне в Telegram, чтобы получить подарок.</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="./script.js" defer></script>
 </body>
 </html>
