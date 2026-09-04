@@ -8,3 +8,12 @@ document.querySelector('[data-close-modal]')?.addEventListener('click',closeModa
 modal?.addEventListener('click',event=>{if(event.target===modal)closeModal();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape')closeModal();});
 document.querySelector('[data-spin]')?.addEventListener('click',()=>{prize.textContent=prizes[Math.floor(Math.random()*prizes.length)];result.hidden=false;});
+
+const certificateModal=document.querySelector('#certificateModal');
+const certificateImage=document.querySelector('[data-certificate-image]');
+const certificateTitle=document.querySelector('#certificateTitle');
+function closeCertificate(){if(!certificateModal)return;certificateModal.classList.remove('open');certificateModal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+document.querySelectorAll('[data-certificate]').forEach(card=>card.addEventListener('click',()=>{certificateImage.src=card.dataset.certificate;certificateTitle.textContent=card.dataset.title;certificateModal.classList.add('open');certificateModal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}));
+document.querySelector('[data-close-certificate]')?.addEventListener('click',closeCertificate);
+certificateModal?.addEventListener('click',event=>{if(event.target===certificateModal)closeCertificate();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')closeCertificate();});
